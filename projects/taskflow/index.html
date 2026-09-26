@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | Todo Application</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================== APP ==================== -->
+    <main class="todo-app">
+
+        <!-- ==================== HEADER ==================== -->
+        <header class="app-header">
+
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="brand-text">
+                    <h1>TaskFlow</h1>
+                    <p>Stay organized. Get things done.</p>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- ==================== TODO CONTENT ==================== -->
+        <section class="todo-content">
+
+            <!-- Task Input -->
+            <div class="task-input-section">
+
+                <form class="task-form" id="taskForm">
+
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-plus"></i>
+
+                        <input type="text" id="taskInput" placeholder="What needs to be done?" autocomplete="off"
+                            maxlength="120">
+                    </div>
+
+                    <button type="submit" class="add-task-btn">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Add Task</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- ==================== TASK SUMMARY ==================== -->
+            <div class="task-summary">
+
+                <div class="summary-text">
+                    <span id="taskCount">3</span>
+                    <span id="taskCountText">tasks remaining</span>
+                </div>
+
+                <button class="clear-completed-btn" id="clearCompleted">
+                    Clear completed
+                </button>
+
+            </div>
+
+
+            <!-- ==================== FILTERS ==================== -->
+            <div class="task-filters">
+
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">
+                    All
+                </button>
+
+                <button class="filter-btn" data-filter="active" aria-pressed="false">
+                    Active
+                </button>
+
+                <button class="filter-btn" data-filter="completed" aria-pressed="false">
+                    Completed
+                </button>
+
+            </div>
+
+
+            <!-- ==================== TASK LIST ==================== -->
+            <div class="task-list" id="taskList"></div>
+
+
+            <!-- ==================== EMPTY STATE ==================== -->
+            <div class="empty-state" id="emptyState">
+
+                <div class="empty-icon">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+
+                <h2>No tasks found</h2>
+
+                <p>
+                    You're all caught up! Add a new task to get started.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== FOOTER ==================== -->
+        <footer class="app-footer">
+
+            <p>
+                Built with <i class="fa-solid fa-heart"></i> using HTML, CSS & JavaScript
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- External JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+/* ================================
+   MENU PAGE HERO
+================================ */
+
+.page-hero {
+    position: relative;
+
+    min-height: 480px;
+
+    background-image:
+        url("../assets/hero/restaurant-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.page-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(25, 17, 11, 0.68);
+}
+
+.page-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.page-hero-content > span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #d88b52;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+.page-hero-content h1 {
+    color: #ffffff;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 60px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.page-hero-content p {
+    max-width: 540px;
+
+    color: #ddd2c9;
+
+    line-height: 1.8;
+}
+
+
+/* ================================
+   MENU SECTIONS
+================================ */
+
+.menu-section {
+    padding: 90px 0;
+
+    background-color: #fffaf5;
+}
+
+.menu-dark {
+    background-color: #2b2118;
+
+    color: #ffffff;
+}
+
+.menu-desserts {
+    background-color: #ffffff;
+}
+
+
+/* ================================
+   MENU HEADING
+================================ */
+
+.menu-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.menu-heading span {
+    color: #b56b35;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+.menu-heading h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    margin-bottom: 12px;
+}
+
+.menu-heading p {
+    color: #75695f;
+
+    font-size: 14px;
+}
+
+.menu-dark .menu-heading p {
+    color: #bdb1a7;
+}
+
+
+/* ================================
+   MENU GRID
+================================ */
+
+.menu-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ================================
+   MENU CARD
+================================ */
+
+.menu-card {
+    background-color: #ffffff;
+
+    border: 1px solid #eee2d7;
+
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+}
+
+.menu-dark .menu-card {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 18px 35px rgba(43, 33, 24, 0.10);
+}
+
+
+/* ================================
+   MENU CARD IMAGE
+================================ */
+
+.menu-card-image {
+    position: relative;
+
+    height: 230px;
+
+    overflow: hidden;
+}
+
+.menu-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-card-image img {
+    transform: scale(1.06);
+}
+
+
+/* ================================
+   MENU BADGE
+================================ */
+
+.menu-badge {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 7px 12px;
+
+    background-color: #b56b35;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* ================================
+   MENU CARD CONTENT
+================================ */
+
+.menu-card-content {
+    padding: 22px;
+}
+
+.menu-card-title {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 9px;
+}
+
+.menu-card-title h3 {
+    color: #2b2118;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 19px;
+}
+
+.menu-dark .menu-card-title h3 {
+    color: #2b2118;
+}
+
+.menu-card-title span {
+    color: #b56b35;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.menu-card-content p {
+    color: #75695f;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ================================
+   FEATURED DISH
+================================ */
+
+.featured-dish {
+    display: flex;
+
+    align-items: stretch;
+
+    background-color: #2b2118;
+
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+.featured-dish-image {
+    width: 50%;
+
+    min-height: 430px;
+}
+
+.featured-dish-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.featured-dish:hover .featured-dish-image img {
+    transform: scale(1.04);
+}
+
+.featured-dish-content {
+    width: 50%;
+
+    padding: 55px;
+}
+
+.featured-dish-content > span {
+    color: #d88b52;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.featured-dish-content h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    margin: 15px 0 20px;
+}
+
+.featured-dish-content p {
+    color: #c6bbb2;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+.featured-price {
+    color: #d88b52;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    margin-bottom: 30px;
+}
+
+.featured-price small {
+    color: #aaa097;
+
+    font-size: 11px;
+
+    font-weight: 400;
+}
+
+
+/* ================================
+   MENU CTA
+================================ */
+
+.menu-cta {
+    padding: 100px 0;
+
+    background-image:
+        linear-gradient(
+            rgba(35, 24, 16, 0.80),
+            rgba(35, 24, 16, 0.80)
+        ),
+        url("../assets/about/restaurant-interior.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.menu-cta-content {
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+.menu-cta-content > span {
+    color: #d88b52;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.menu-cta-content h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 48px;
+
+    line-height: 1.15;
+
+    margin: 12px 0 15px;
+}
+
+.menu-cta-content p {
+    color: #d0c5bc;
+
+    margin-bottom: 28px;
+}

@@ -1,0 +1,810 @@
+/* =========================================
+   ABOUT HERO
+========================================= */
+
+.about-hero {
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        url("../assets/about/restaurant-story.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: #ffffff;
+}
+
+.about-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(25, 17, 11, 0.82),
+            rgba(25, 17, 11, 0.45)
+        );
+}
+
+.about-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 620px;
+
+    padding: 80px 0;
+}
+
+.about-eyebrow {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #d88b52;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+}
+
+.about-eyebrow i {
+    font-size: 14px;
+}
+
+.about-hero-content h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 64px;
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+}
+
+.hero-divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.hero-divider::before,
+.hero-divider::after {
+    content: "";
+
+    width: 35px;
+    height: 1px;
+
+    background-color: #d88b52;
+}
+
+.hero-divider i {
+    color: #d88b52;
+
+    font-size: 13px;
+}
+
+.about-hero-content > p {
+    max-width: 550px;
+
+    color: #ddd3cb;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+
+/* =========================================
+   STORY SECTION
+========================================= */
+
+.story-section {
+    background-color: #fffaf5;
+}
+
+.story-container {
+    display: flex;
+
+    align-items: center;
+
+    gap: 65px;
+}
+
+.story-image {
+    position: relative;
+
+    width: 50%;
+
+    height: 500px;
+
+    overflow: visible;
+}
+
+.story-image > img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.story-image:hover > img {
+    transform: scale(1.02);
+}
+
+.story-image-tag {
+    position: absolute;
+
+    right: -25px;
+    bottom: 30px;
+
+    width: 100px;
+    height: 100px;
+
+    background-color: #b56b35;
+
+    color: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow: 0 10px 25px rgba(43, 33, 24, 0.18);
+}
+
+.story-image-tag span {
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.story-image-tag strong {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 30px;
+}
+
+.story-content {
+    width: 50%;
+}
+
+.story-content h2 {
+    max-width: 500px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 44px;
+
+    line-height: 1.15;
+
+    color: #2b2118;
+
+    margin-bottom: 15px;
+}
+
+.about-line {
+    width: 45px;
+    height: 2px;
+
+    background-color: #b56b35;
+
+    margin-bottom: 22px;
+}
+
+.story-content > p {
+    max-width: 540px;
+
+    color: #75695f;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    margin-bottom: 15px;
+}
+
+.story-signature {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-top: 25px;
+}
+
+.story-signature span {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 30px;
+
+    font-style: italic;
+
+    color: #b56b35;
+}
+
+.story-signature small {
+    color: #958980;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+
+
+/* =========================================
+   PHILOSOPHY
+========================================= */
+
+.philosophy-section {
+    padding: 90px 0;
+
+    background-color: #f2e6da;
+}
+
+.philosophy-container {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.6fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.philosophy-intro h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    color: #2b2118;
+
+    margin-bottom: 15px;
+}
+
+.philosophy-intro > p {
+    max-width: 390px;
+
+    color: #75695f;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.philosophy-signature {
+    margin-top: 20px;
+
+    color: #b56b35;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 25px;
+
+    font-style: italic;
+}
+
+.philosophy-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    border-left: 1px solid #d8c7b8;
+}
+
+.philosophy-item {
+    padding: 30px;
+
+    text-align: center;
+
+    border-right: 1px solid #d8c7b8;
+
+    border-bottom: 1px solid #d8c7b8;
+
+    transition: background-color 0.3s ease;
+}
+
+.philosophy-item:nth-child(3),
+.philosophy-item:nth-child(4) {
+    border-bottom: none;
+}
+
+.philosophy-item:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.philosophy-icon {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 15px;
+
+    color: #b56b35;
+
+    font-size: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.philosophy-item h3 {
+    font-family: 'Playfair Display', serif;
+
+    color: #2b2118;
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+.philosophy-item p {
+    color: #75695f;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =========================================
+   DIFFERENCE SECTION
+========================================= */
+
+.difference-section {
+    background-color: #ffffff;
+}
+
+.difference-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.difference-card {
+    position: relative;
+
+    padding: 35px 25px;
+
+    border: 1px solid #eee2d7;
+
+    transition: all 0.3s ease;
+
+    overflow: hidden;
+}
+
+.difference-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #b56b35;
+
+    box-shadow: 0 15px 30px rgba(43, 33, 24, 0.07);
+}
+
+.difference-number {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    color: #e5d9ce;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 28px;
+
+    font-weight: 700;
+}
+
+.difference-card > i {
+    color: #b56b35;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.difference-card h3 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 20px;
+
+    color: #2b2118;
+
+    margin-bottom: 10px;
+}
+
+.difference-card p {
+    color: #75695f;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+
+
+/* =========================================
+   TEAM SECTION
+========================================= */
+
+.team-section {
+    padding: 100px 0;
+
+    background-color: #2b2118;
+
+    color: #ffffff;
+}
+
+.team-container {
+    display: flex;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+.team-image {
+    position: relative;
+
+    width: 50%;
+
+    height: 500px;
+}
+
+.team-image > img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.team-image:hover > img {
+    transform: scale(1.02);
+}
+
+.team-image-badge {
+    position: absolute;
+
+    bottom: 25px;
+    left: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 20px;
+
+    background-color: #b56b35;
+
+    color: #ffffff;
+}
+
+.team-image-badge strong {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 30px;
+}
+
+.team-image-badge span {
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.team-content {
+    width: 50%;
+}
+
+.team-content .section-label {
+    color: #d88b52;
+}
+
+.team-content h2 {
+    max-width: 500px;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 43px;
+
+    line-height: 1.15;
+
+    margin-bottom: 15px;
+}
+
+.team-content .about-line {
+    margin-bottom: 22px;
+}
+
+.team-content > p {
+    max-width: 540px;
+
+    color: #c4b8ae;
+
+    font-size: 14px;
+
+    line-height: 1.85;
+
+    margin-bottom: 15px;
+}
+
+
+
+/* =========================================
+   TEAM STATS
+========================================= */
+
+.team-stats {
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 30px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.team-stat {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding-right: 25px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.team-stat:last-child {
+    border-right: none;
+}
+
+.team-stat > i {
+    color: #d88b52;
+
+    font-size: 20px;
+}
+
+.team-stat div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.team-stat strong {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 23px;
+}
+
+.team-stat span {
+    color: #9f9389;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+
+/* =========================================
+   VALUES
+========================================= */
+
+.values-section {
+    background-color: #fffaf5;
+}
+
+.values-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    border-top: 1px solid #e1d4c8;
+
+    border-bottom: 1px solid #e1d4c8;
+}
+
+.value-item {
+    padding: 35px 22px;
+
+    text-align: center;
+
+    border-right: 1px solid #e1d4c8;
+
+    transition: background-color 0.3s ease;
+}
+
+.value-item:first-child {
+    border-left: 1px solid #e1d4c8;
+}
+
+.value-item:hover {
+    background-color: #f2e6da;
+}
+
+.value-item > i {
+    color: #b56b35;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.value-item h3 {
+    font-family: 'Playfair Display', serif;
+
+    color: #2b2118;
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+.value-item p {
+    color: #75695f;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =========================================
+   ABOUT CTA
+========================================= */
+
+.about-cta {
+    position: relative;
+
+    padding: 100px 0;
+
+    background-image:
+        url("../assets/about/dining-experience.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.about-cta-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(28, 19, 12, 0.72);
+}
+
+.about-cta-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 650px;
+
+    color: #ffffff;
+}
+
+.about-cta-content > span {
+    color: #d88b52;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.about-cta-content h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 50px;
+
+    line-height: 1.15;
+
+    margin: 12px 0 15px;
+}
+
+.about-cta-content p {
+    max-width: 500px;
+
+    color: #d4c9c0;
+
+    line-height: 1.8;
+
+    margin-bottom: 28px;
+}
+
+/* =========================================
+   ABOUT RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .about-image {
+        width: 100%;
+
+        height: 450px;
+    }
+
+
+    .about-content {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-image {
+        height: 330px;
+    }
+
+
+    .about-content h2 {
+        font-size: 38px;
+    }
+
+}

@@ -1,0 +1,178 @@
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    background-color: #1d1712;
+    color: #ffffff;
+}
+
+
+/* ================================
+   FOOTER MAIN CONTAINER
+================================ */
+
+.footer-container {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+
+    gap: 50px;
+
+    padding-top: 70px;
+    padding-bottom: 60px;
+}
+
+
+/* ================================
+   FOOTER BRAND
+================================ */
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo .logo-text {
+    color: #ffffff;
+}
+
+.footer-brand > p {
+    max-width: 300px;
+
+    color: #a99e94;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================================
+   SOCIAL LINKS
+================================ */
+
+.social-links {
+    display: flex;
+
+    gap: 10px;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #bdb1a7;
+
+    font-size: 13px;
+
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #b56b35;
+
+    border-color: #b56b35;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================================
+   FOOTER COLUMNS
+================================ */
+
+.footer-column h3 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.footer-column li a {
+    color: #a99e94;
+
+    font-size: 13px;
+
+    transition: all 0.3s ease;
+}
+
+.footer-column li a:hover {
+    color: #d88b52;
+
+    padding-left: 4px;
+}
+
+
+/* ================================
+   FOOTER CONTACT
+================================ */
+
+.footer-contact p {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    color: #a99e94;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-bottom: 14px;
+}
+
+.footer-contact i {
+    color: #b56b35;
+
+    margin-top: 3px;
+}
+
+
+/* ================================
+   FOOTER BOTTOM
+================================ */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    padding: 20px 0;
+}
+
+.footer-bottom .container {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    color: #81766d;
+
+    font-size: 11px;
+}
+
+.footer-bottom i {
+    color: #b56b35;
+}

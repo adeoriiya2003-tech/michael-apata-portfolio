@@ -1,0 +1,534 @@
+/* =========================================
+   CHEF'S RECOMMENDATION
+========================================= */
+
+.chef-recommendation {
+    background-color: #fffaf5;
+}
+
+.chef-container {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+
+/* IMAGE */
+
+.chef-image {
+    position: relative;
+
+    height: 560px;
+
+    overflow: hidden;
+}
+
+.chef-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+.chef-image:hover img {
+    transform: scale(1.04);
+}
+
+.chef-image-label {
+    position: absolute;
+
+    top: 20px;
+    left: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 15px;
+
+    background-color: #2b2118;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.chef-image-label i {
+    color: #d88b52;
+}
+
+
+
+/* CONTENT */
+
+.chef-content {
+    max-width: 520px;
+}
+
+.chef-content h2 {
+    color: #2b2118;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 48px;
+
+    line-height: 1.1;
+
+    margin: 10px 0 18px;
+}
+
+.chef-intro {
+    color: #75695f;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+
+/* DISH */
+
+.chef-dish {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 22px 0;
+
+    border-top: 1px solid #dfd2c6;
+
+    border-bottom: 1px solid #dfd2c6;
+}
+
+.chef-dish h3 {
+    color: #2b2118;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+.chef-dish p {
+    max-width: 390px;
+
+    color: #75695f;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+.chef-dish strong {
+    flex-shrink: 0;
+
+    color: #b56b35;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 18px;
+}
+
+
+
+/* DETAILS */
+
+.chef-details {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    margin: 22px 0 28px;
+}
+
+.chef-details span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #5e5249;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.6px;
+}
+
+.chef-details i {
+    color: #b56b35;
+}
+
+
+
+/* =========================================
+   SPECIAL OFFER
+========================================= */
+
+.special-offer {
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    background-image:
+        url("../assets/special-offer.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+.special-offer-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(35, 25, 17, 0.78),
+            rgba(35, 25, 17, 0.78)
+        );
+}
+
+.special-offer .container {
+    position: relative;
+
+    z-index: 2;
+}
+
+.special-offer-content {
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.offer-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #e3a16d;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+.special-offer-content h2 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 52px;
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+}
+
+.special-offer-content > p {
+    max-width: 560px;
+
+    margin: 0 auto 25px;
+
+    color: #ddd1c8;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+
+/* PRICE */
+
+.offer-price {
+    display: flex;
+
+    align-items: baseline;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+}
+
+.offer-price span {
+    color: #c8bbb1;
+
+    font-size: 10px;
+}
+
+.offer-price strong {
+    color: #e3a16d;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 30px;
+}
+
+
+
+/* DETAILS */
+
+.offer-details {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+.offer-details span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #ddd1c8;
+
+    font-size: 10px;
+}
+
+.offer-details i {
+    color: #e3a16d;
+}
+
+
+
+/* LIGHT BUTTON */
+
+.btn-light {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 24px;
+
+    background-color: #ffffff;
+
+    color: #2b2118;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: #b56b35;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .chef-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .chef-image {
+        height: 500px;
+    }
+
+    .chef-content {
+        max-width: 100%;
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    .chef-image {
+        height: 400px;
+    }
+
+    .chef-content h2 {
+        font-size: 38px;
+    }
+
+    .chef-dish {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .special-offer {
+        min-height: 560px;
+    }
+
+    .special-offer-content h2 {
+        font-size: 40px;
+    }
+
+    .offer-details {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .chef-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .chef-image {
+        width: 100%;
+        height: 480px;
+    }
+
+
+    .chef-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .chef-image {
+        height: 360px;
+    }
+
+
+    .chef-content h2 {
+        font-size: 38px;
+    }
+
+
+    .chef-dish {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .chef-dish p {
+        max-width: 100%;
+    }
+
+
+    .chef-details {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .special-offer {
+        min-height: 550px;
+
+        padding: 70px 0;
+    }
+
+
+    .special-offer-content {
+        width: 90%;
+    }
+
+
+    .special-offer-content h2 {
+        font-size: 38px;
+    }
+
+
+    .special-offer-content > p {
+        font-size: 12px;
+    }
+
+
+    .offer-price {
+        flex-wrap: wrap;
+    }
+
+
+    .offer-details {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+    }
+
+}

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYBE — Alex Morgan</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <a href="#" class="logo">
+                VYBE<span>.</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="nav-links">
+
+                <a href="#" class="nav-link active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-compass"></i>
+                    <span>Explore</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <i class="fa-regular fa-bell"></i>
+                    <span>Notifications</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <i class="fa-regular fa-message"></i>
+                    <span>Messages</span>
+                </a>
+
+            </div>
+
+            <!-- Navigation Right -->
+            <div class="nav-actions">
+
+                <button class="search-button" id="search-button" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button class="create-button">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Create</span>
+                </button>
+
+                <a href="#" class="nav-avatar">
+                    <img src="images/profile.jpg" alt="Alex Morgan">
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="search-panel" id="search-panel">
+
+    <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search VYBE..."
+        >
+
+        <button id="close-search" aria-label="Close search">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+</div>
+
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main-content">
+
+        <!-- ==================== PROFILE ==================== -->
+        <section class="profile">
+
+            <!-- Cover -->
+            <div class="cover">
+                <img src="images/cover.jpg" alt="Alex Morgan cover image">
+            </div>
+
+
+            <!-- Profile Information -->
+            <div class="profile-container">
+
+                <!-- Profile Picture -->
+                <div class="profile-picture">
+                    <img src="images/profile.jpg" alt="Alex Morgan">
+                </div>
+
+
+                <!-- Profile Header -->
+                <div class="profile-header">
+
+                    <div class="profile-details">
+
+                        <div class="name-row">
+
+                            <h1>Alex Morgan</h1>
+
+                            <span class="verified">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+
+                        </div>
+
+                        <p class="username">@alexmorgan</p>
+
+                        <p class="bio">
+                            Building digital experiences & occasionally breaking them.
+                            Designer, developer and creative thinker.
+                        </p>
+
+                        <!-- Profile Meta -->
+                        <div class="profile-meta">
+
+                            <span>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Lagos, Nigeria
+                            </span>
+
+                            <a href="#">
+                                <i class="fa-solid fa-link"></i>
+                                alexmorgan.dev
+                            </a>
+
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                Joined March 2022
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Profile Actions -->
+                    <div class="profile-actions">
+
+                        <div class="profile-menu" id="profile-menu">
+
+                            <button>
+                                <i class="fa-regular fa-bell"></i>
+                                Turn on notifications
+                            </button>
+
+                            <button>
+                                <i class="fa-solid fa-link"></i>
+                                Copy profile link
+                            </button>
+
+                            <button>
+                                <i class="fa-regular fa-flag"></i>
+                                Report profile
+                            </button>
+
+                        </div>
+
+                        <button class="action-button secondary">
+                            <i class="fa-regular fa-envelope"></i>
+                            Message
+                        </button>
+
+                        <button class="action-button primary follow-button">
+                            Follow
+                        </button>
+
+                        <button class="action-button icon-button more-button" aria-label="More options">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Profile Statistics -->
+                <div class="profile-stats">
+
+                    <div class="stat">
+                        <strong>128</strong>
+                        <span>Posts</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong id="follower-count">24.8K</strong>
+                        <span>Followers</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>386</strong>
+                        <span>Following</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== PROFILE CONTENT ==================== -->
+        <section class="profile-content">
+
+            <div class="content-container">
+
+                <!-- Profile Tabs -->
+                <div class="profile-tabs">
+
+                    <button class="tab active" data-tab="posts">
+                        <i class="fa-solid fa-table-cells"></i>
+                        <span>Posts</span>
+                    </button>
+
+                    <button class="tab" data-tab="media">
+                        <i class="fa-solid fa-photo-film"></i>
+                        <span>Media</span>
+                    </button>
+
+                    <button class="tab" data-tab="likes">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Likes</span>
+                    </button>
+
+                    <button class="tab" data-tab="saved">
+                        <i class="fa-solid fa-bookmark"></i>
+                        <span>Saved</span>
+                    </button>
+
+                </div>
+
+
+                <!-- Post Grid -->
+                <div class="post-grid">
+
+                    <div class="empty-state" id="empty-state">
+
+                        <div class="empty-icon">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+
+                        <h2>No saved posts yet</h2>
+
+                        <p>
+                            Posts you save will appear here.
+                        </p>
+
+                    </div>
+
+                    <!-- Post 1 -->
+                    <article class="post featured" data-category="posts media">
+                        <img src="images/post-1.jpg" alt="Modern architecture">
+                        <div class="post-overlay">
+                            <div class="post-stats">
+                                <span class="like-stat">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span class="like-count">2.4K</span>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-comment"></i>
+                                    183
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Post 2 -->
+                    <article class="post" data-category="posts">
+                        <img src="images/post-2.jpg" alt="Developer workspace">
+                        <div class="post-overlay">
+                            <div class="post-stats">
+                                <span class="like-stat">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span class="like-count">1.8K</span>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-comment"></i>
+                                    92
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Post 3 -->
+                    <article class="post" data-category="posts media">
+                        <img src="images/post-3.jpg" alt="City at night">
+                        <div class="post-overlay">
+                            <div class="post-stats">
+                                <span class="like-stat">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span class="like-count">3.1K</span>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-comment"></i>
+                                    241
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Post 4 -->
+                    <article class="post" data-category="posts likes">
+                        <img src="images/post-4.jpg" alt="Coffee and lifestyle">
+                        <div class="post-overlay">
+                            <div class="post-stats">
+                                <span class="like-stat">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span class="like-count">986</span>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-comment"></i>
+                                    47
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Post 5 -->
+                    <article class="post" data-category="posts">
+                        <img src="images/post-5.jpg" alt="Creative workspace">
+                        <div class="post-overlay">
+                            <div class="post-stats">
+                                <span class="like-stat">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span class="like-count">1.5K</span>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-comment"></i>
+                                    76
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Post 6 -->
+                    <article class="post" data-category="posts media likes">
+                        <img src="images/post-6.jpg" alt="Travel and nature">
+                        <div class="post-overlay">
+                            <div class="post-stats">
+                                <span class="like-stat">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span class="like-count">4.2K</span>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-comment"></i>
+                                    318
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Post 7 -->
+                    <article class="post" data-category="posts">
+                        <img src="images/post-7.jpg" alt="Street fashion">
+                        <div class="post-overlay">
+                            <div class="post-stats">
+                                <span class="like-stat">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span class="like-count">1.2K</span>
+                                </span>
+                                <span>
+                                    <i class="fa-solid fa-comment"></i>
+                                    64
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Post 8 -->
+                    <article class="post" data-category="posts likes">
+                        <img src="images/post-8.jpg" alt="Abstract creative artwork">
+                        <div class="post-overlay">
+                            <div class="post-stats">
+                                <span class="like-stat">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span class="like-count">2.7K</span>
+                                    <span>
+                                        <i class="fa-solid fa-comment"></i>
+                                        129
+                                    </span>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Post 9 -->
+                    <article class="post" data-category="posts media">
+                        <img src="images/post-9.jpg" alt="Futuristic technology">
+                        <div class="post-overlay">
+                            <div class="post-stats">
+                                <span class="like-stat">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <span class="like-count">3.5K</span>
+                                    <span>
+                                        <i class="fa-solid fa-comment"></i>
+                                        88
+                                    </span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

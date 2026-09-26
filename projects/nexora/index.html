@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXORA | Admin Dashboard</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container" id="sidebarOverlay">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+
+            <!-- Logo -->
+            <div class="sidebar-logo">
+
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+
+                    <span>NEXORA</span>
+                </a>
+
+                <!-- Close Sidebar Button -->
+                <button class="sidebar-close" id="sidebarClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <!-- Sidebar Navigation -->
+            <nav class="sidebar-nav">
+
+                <p class="nav-title">MAIN MENU</p>
+
+                <ul>
+
+                    <li>
+                        <a href="#" class="nav-link active">
+                            <i class="fa-solid fa-table-columns"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>Orders</span>
+                            <span class="nav-badge">12</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-box"></i>
+                            <span>Products</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <p class="nav-title">MANAGEMENT</p>
+
+                <ul>
+
+                    <li>
+                        <a href="#" class="nav-link">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>Messages</span>
+                            <span class="message-dot"></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+            <div class="sidebar-bottom">
+
+                <div class="help-card">
+
+                    <div class="help-icon">
+                        <i class="fa-regular fa-circle-question"></i>
+                    </div>
+
+                    <div>
+                        <h4>Need Help?</h4>
+                        <p>Contact our support team.</p>
+                    </div>
+
+                    <a href="#" class="help-link">
+                        Get Support
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <a href="#" class="logout-btn" id="logoutBtn">
+
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                    <span>Log Out</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Dashboard Content -->
+        <main class="main-content" id="mainContent">
+
+
+            <!-- Top Navigation -->
+            <header class="top-navbar">
+
+                <!-- Left Side -->
+                <div class="top-nav-left">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="menu-toggle" id="menuToggle">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <!-- Search Bar -->
+                    <div class="search-container">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="text" id="dashboardSearch" placeholder="Search anything...">
+
+                    </div>
+
+                </div>
+
+
+                <!-- Right Side -->
+                <div class="top-nav-right">
+
+
+                    <!-- Notification -->
+                    <div class="nav-action">
+
+                        <button class="icon-btn" id="notificationBtn" aria-label="Notifications">
+
+                            <i class="fa-regular fa-bell"></i>
+
+                            <span class="notification-badge">3</span>
+
+                        </button>
+
+
+                        <!-- Notification Dropdown -->
+                        <div class="notification-dropdown" id="notificationDropdown">
+
+                            <div class="dropdown-header">
+
+                                <h3>Notifications</h3>
+
+                                <span>3 New</span>
+
+                            </div>
+
+
+                            <div class="notification-list">
+
+                                <div class="notification-item">
+
+                                    <div class="notification-icon success">
+
+                                        <i class="fa-solid fa-check"></i>
+
+                                    </div>
+
+                                    <div class="notification-text">
+
+                                        <p>New order has been completed.</p>
+
+                                        <span>5 minutes ago</span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="notification-item">
+
+                                    <div class="notification-icon info">
+
+                                        <i class="fa-solid fa-user-plus"></i>
+
+                                    </div>
+
+                                    <div class="notification-text">
+
+                                        <p>A new customer joined NEXORA.</p>
+
+                                        <span>20 minutes ago</span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="notification-item">
+
+                                    <div class="notification-icon warning">
+
+                                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                                    </div>
+
+                                    <div class="notification-text">
+
+                                        <p>Monthly report is ready.</p>
+
+                                        <span>1 hour ago</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <a href="#" class="view-all-notifications">
+
+                                View All Notifications
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Messages -->
+                    <button class="icon-btn" id="messageBtn" aria-label="Messages">
+
+                        <i class="fa-regular fa-comment-dots"></i>
+
+                        <span class="message-badge">2</span>
+
+                    </button>
+
+
+                    <!-- Profile -->
+                    <div class="profile-area">
+
+                        <button class="profile-btn" id="profileBtn">
+
+                            <img src="assets/images/profile.jpg" alt="Admin Profile">
+
+                            <div class="profile-info">
+
+                                <span class="profile-name">
+                                    Michael Apata
+                                </span>
+
+                                <span class="profile-role">
+                                    Administrator
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+
+                        <!-- Profile Dropdown -->
+                        <div class="profile-dropdown" id="profileDropdown">
+
+                            <a href="#">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                My Profile
+
+                            </a>
+
+
+                            <a href="#">
+
+                                <i class="fa-solid fa-gear"></i>
+
+                                Account Settings
+
+                            </a>
+
+
+                            <hr>
+
+
+                            <a href="#" class="dropdown-logout" id="dropdownLogoutBtn">
+
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                                Log Out
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Dashboard Page Content -->
+            <section class="dashboard-page">
+
+                <!-- Dashboard Header -->
+                <div class="dashboard-header">
+
+                    <div class="dashboard-title">
+
+                        <div>
+                            <p class="welcome-text">Welcome back, Michael 👋</p>
+
+                            <h1>Dashboard Overview</h1>
+
+                            <p class="dashboard-subtitle">
+                                Here is what is happening with your business today.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-actions">
+
+                        <!-- Date Filter -->
+                        <div class="date-filter">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            <select id="dateFilter">
+
+                                <option value="today">Today</option>
+
+                                <option value="week">This Week</option>
+
+                                <option value="month" selected>This Month</option>
+
+                                <option value="year">This Year</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Download Report Button -->
+                        <button class="download-report-btn" id="downloadReportBtn">
+
+                            <i class="fa-solid fa-arrow-down-to-bracket"></i>
+
+                            Download Report
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Statistics Cards -->
+                <div class="stats-grid">
+
+
+                    <!-- Total Revenue -->
+                    <div class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon revenue-icon">
+
+                                <i class="fa-solid fa-dollar-sign"></i>
+
+                            </div>
+
+
+                            <span class="stat-menu">
+
+                                <i class="fa-solid fa-ellipsis"></i>
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat-card-content">
+
+                            <p class="stat-label">Total Revenue</p>
+
+                            <h2 id="totalRevenue">$84,920</h2>
+
+
+                            <div class="stat-growth positive">
+
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                <span>12.5%</span>
+
+                                <p>vs last month</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Total Orders -->
+                    <div class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon orders-icon">
+
+                                <i class="fa-solid fa-bag-shopping"></i>
+
+                            </div>
+
+
+                            <span class="stat-menu">
+
+                                <i class="fa-solid fa-ellipsis"></i>
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat-card-content">
+
+                            <p class="stat-label">Total Orders</p>
+
+                            <h2 id="totalOrders">2,468</h2>
+
+
+                            <div class="stat-growth positive">
+
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                <span>8.2%</span>
+
+                                <p>vs last month</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Total Customers -->
+                    <div class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon customers-icon">
+
+                                <i class="fa-solid fa-users"></i>
+
+                            </div>
+
+
+                            <span class="stat-menu">
+
+                                <i class="fa-solid fa-ellipsis"></i>
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat-card-content">
+
+                            <p class="stat-label">Total Customers</p>
+
+                            <h2 id="totalCustomers">12,580</h2>
+
+
+                            <div class="stat-growth positive">
+
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                <span>15.3%</span>
+
+                                <p>vs last month</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Conversion Rate -->
+                    <div class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="stat-icon conversion-icon">
+
+                                <i class="fa-solid fa-chart-pie"></i>
+
+                            </div>
+
+
+                            <span class="stat-menu">
+
+                                <i class="fa-solid fa-ellipsis"></i>
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="stat-card-content">
+
+                            <p class="stat-label">Conversion Rate</p>
+
+                            <h2 id="conversionRate">6.84%</h2>
+
+
+                            <div class="stat-growth negative">
+
+                                <i class="fa-solid fa-arrow-trend-down"></i>
+
+                                <span>2.4%</span>
+
+                                <p>vs last month</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- ================================
+     REVENUE ANALYTICS
+================================ -->
+
+                <div class="analytics-grid">
+
+                    <!-- Revenue Chart -->
+                    <div class="revenue-card">
+
+                        <div class="section-card-header">
+
+                            <div>
+
+                                <h2>Revenue Overview</h2>
+
+                                <p>Track your business revenue performance.</p>
+
+                            </div>
+
+
+                            <!-- Chart Filter -->
+                            <div class="chart-filter">
+
+                                <button class="chart-filter-btn active" data-period="monthly">
+                                    Monthly
+                                </button>
+
+                                <button class="chart-filter-btn" data-period="weekly">
+                                    Weekly
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Revenue Summary -->
+                        <div class="revenue-summary">
+
+                            <div>
+
+                                <p>Total Revenue</p>
+
+                                <h3 id="chartRevenue">$84,920</h3>
+
+                            </div>
+
+
+                            <div class="revenue-growth">
+
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                <span>12.5%</span>
+
+                                <p>Compared to last month</p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Chart -->
+                        <div class="chart-wrapper">
+
+                            <!-- Y Axis -->
+                            <div class="chart-y-axis">
+
+                                <span>$100k</span>
+                                <span>$80k</span>
+                                <span>$60k</span>
+                                <span>$40k</span>
+                                <span>$20k</span>
+                                <span>$0</span>
+
+                            </div>
+
+
+                            <!-- Chart Area -->
+                            <div class="chart-area">
+
+                                <!-- Chart Grid Lines -->
+                                <div class="chart-grid-lines">
+
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+
+                                </div>
+
+
+                                <!-- Bars -->
+                                <div class="bar-group">
+
+                                    <div class="bar" style="height: 42%;">
+                                        <span class="bar-value">$42k</span>
+                                    </div>
+
+                                    <span class="bar-label">Jan</span>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <div class="bar" style="height: 55%;">
+                                        <span class="bar-value">$55k</span>
+                                    </div>
+
+                                    <span class="bar-label">Feb</span>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <div class="bar" style="height: 48%;">
+                                        <span class="bar-value">$48k</span>
+                                    </div>
+
+                                    <span class="bar-label">Mar</span>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <div class="bar" style="height: 68%;">
+                                        <span class="bar-value">$68k</span>
+                                    </div>
+
+                                    <span class="bar-label">Apr</span>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <div class="bar" style="height: 62%;">
+                                        <span class="bar-value">$62k</span>
+                                    </div>
+
+                                    <span class="bar-label">May</span>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <div class="bar" style="height: 78%;">
+                                        <span class="bar-value">$78k</span>
+                                    </div>
+
+                                    <span class="bar-label">Jun</span>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <div class="bar" style="height: 85%;">
+                                        <span class="bar-value">$85k</span>
+                                    </div>
+
+                                    <span class="bar-label">Jul</span>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <div class="bar" style="height: 72%;">
+                                        <span class="bar-value">$72k</span>
+                                    </div>
+
+                                    <span class="bar-label">Aug</span>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <div class="bar" style="height: 90%;">
+                                        <span class="bar-value">$90k</span>
+                                    </div>
+
+                                    <span class="bar-label">Sep</span>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <div class="bar" style="height: 82%;">
+                                        <span class="bar-value">$82k</span>
+                                    </div>
+
+                                    <span class="bar-label">Oct</span>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <div class="bar" style="height: 94%;">
+                                        <span class="bar-value">$94k</span>
+                                    </div>
+
+                                    <span class="bar-label">Nov</span>
+
+                                </div>
+
+
+                                <div class="bar-group">
+
+                                    <div class="bar current-bar" style="height: 88%;">
+                                        <span class="bar-value">$88k</span>
+                                    </div>
+
+                                    <span class="bar-label">Dec</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Revenue Performance -->
+                    <div class="performance-card">
+
+                        <div class="section-card-header">
+
+                            <div>
+
+                                <h2>Revenue Performance</h2>
+
+                                <p>Your business performance this month.</p>
+
+                            </div>
+
+
+                            <button class="more-btn">
+
+                                <i class="fa-solid fa-ellipsis"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- Performance Circle -->
+                        <div class="performance-content">
+
+                            <div class="progress-circle">
+
+                                <div class="progress-circle-inner">
+
+                                    <strong>78%</strong>
+
+                                    <span>Growth</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="performance-info">
+
+                                <h3>$84,920</h3>
+
+                                <p>Total revenue generated this month.</p>
+
+
+                                <div class="performance-status">
+
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                    <span>12.5% higher than last month</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Performance Details -->
+                        <div class="performance-details">
+
+                            <div class="performance-detail">
+
+                                <div class="detail-icon target">
+
+                                    <i class="fa-solid fa-bullseye"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <p>Monthly Target</p>
+
+                                    <strong>$100,000</strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="performance-detail">
+
+                                <div class="detail-icon profit">
+
+                                    <i class="fa-solid fa-chart-line"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <p>Net Profit</p>
+
+                                    <strong>$32,480</strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ================================
+     RECENT TRANSACTIONS
+================================ -->
+
+                <div class="transactions-card">
+
+                    <!-- Transactions Header -->
+                    <div class="transactions-header">
+
+                        <div>
+
+                            <h2>Recent Transactions</h2>
+
+                            <p>Monitor your latest business transactions.</p>
+
+                        </div>
+
+
+                        <div class="transaction-actions">
+
+                            <!-- Transaction Search -->
+                            <div class="transaction-search">
+
+                                <i class="fa-solid fa-magnifying-glass"></i>
+
+                                <input type="text" id="transactionSearch" placeholder="Search transactions...">
+
+                            </div>
+
+
+                            <!-- Filter Button -->
+                            <button class="transaction-filter-btn" id="transactionFilterBtn">
+
+                                <i class="fa-solid fa-filter"></i>
+
+                                Filter
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Table Container -->
+                    <div class="table-container">
+
+                        <table class="transactions-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Customer</th>
+
+                                    <th>Transaction ID</th>
+
+                                    <th>Date</th>
+
+                                    <th>Amount</th>
+
+                                    <th>Status</th>
+
+                                    <th>Action</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="transactionTableBody">
+
+
+                                <!-- Transaction 1 -->
+                                <tr class="transaction-row">
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="assets/images/user-1.jpg" alt="Customer">
+
+                                            <div>
+
+                                                <strong>Olivia Bennett</strong>
+
+                                                <span>olivia@email.com</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="transaction-id">
+                                            #NX-48291
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>Aug 28, 2026</td>
+
+
+                                    <td>
+
+                                        <strong class="transaction-amount">
+                                            $1,240.00
+                                        </strong>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="status completed">
+
+                                            <span class="status-dot"></span>
+
+                                            Completed
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button class="table-action-btn" aria-label="View transaction">
+
+                                            <i class="fa-solid fa-ellipsis"></i>
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- Transaction 2 -->
+                                <tr class="transaction-row">
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="assets/images/user-2.jpg" alt="Customer">
+
+                                            <div>
+
+                                                <strong>Daniel Carter</strong>
+
+                                                <span>daniel@email.com</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="transaction-id">
+                                            #NX-48290
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>Aug 27, 2026</td>
+
+
+                                    <td>
+
+                                        <strong class="transaction-amount">
+                                            $860.00
+                                        </strong>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="status pending">
+
+                                            <span class="status-dot"></span>
+
+                                            Pending
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button class="table-action-btn" aria-label="View transaction">
+
+                                            <i class="fa-solid fa-ellipsis"></i>
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- Transaction 3 -->
+                                <tr class="transaction-row">
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="assets/images/user-3.jpg" alt="Customer">
+
+                                            <div>
+
+                                                <strong>Sophia Mitchell</strong>
+
+                                                <span>sophia@email.com</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="transaction-id">
+                                            #NX-48289
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>Aug 26, 2026</td>
+
+
+                                    <td>
+
+                                        <strong class="transaction-amount">
+                                            $2,540.00
+                                        </strong>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="status completed">
+
+                                            <span class="status-dot"></span>
+
+                                            Completed
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button class="table-action-btn" aria-label="View transaction">
+
+                                            <i class="fa-solid fa-ellipsis"></i>
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- Transaction 4 -->
+                                <tr class="transaction-row">
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="assets/images/user-4.jpg" alt="Customer">
+
+                                            <div>
+
+                                                <strong>James Anderson</strong>
+
+                                                <span>james@email.com</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="transaction-id">
+                                            #NX-48288
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>Aug 25, 2026</td>
+
+
+                                    <td>
+
+                                        <strong class="transaction-amount">
+                                            $1,780.00
+                                        </strong>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="status cancelled">
+
+                                            <span class="status-dot"></span>
+
+                                            Cancelled
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button class="table-action-btn" aria-label="View transaction">
+
+                                            <i class="fa-solid fa-ellipsis"></i>
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- Transaction 5 -->
+                                <tr class="transaction-row">
+
+                                    <td>
+
+                                        <div class="customer-info">
+
+                                            <img src="assets/images/user-2.jpg" alt="Customer">
+
+                                            <div>
+
+                                                <strong>Emma Williams</strong>
+
+                                                <span>emma@email.com</span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="transaction-id">
+                                            #NX-48287
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>Aug 24, 2026</td>
+
+
+                                    <td>
+
+                                        <strong class="transaction-amount">
+                                            $960.00
+                                        </strong>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="status completed">
+
+                                            <span class="status-dot"></span>
+
+                                            Completed
+
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button class="table-action-btn" aria-label="View transaction">
+
+                                            <i class="fa-solid fa-ellipsis"></i>
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- No Search Results -->
+                    <div class="no-transaction-results" id="noTransactionResults">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <h3>No transactions found</h3>
+
+                        <p>Try searching for a different customer or transaction.</p>
+
+                    </div>
+
+
+                    <!-- View All -->
+                    <div class="view-all-transactions">
+
+                        <button id="viewAllTransactionsBtn">
+
+                            View All Transactions
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- ================================
+     ACTIVITY AND INSIGHTS
+================================ -->
+
+                <div class="bottom-dashboard-grid">
+
+                    <!-- Recent Activity -->
+                    <div class="activity-card">
+
+                        <div class="section-card-header">
+
+                            <div>
+
+                                <h2>Recent Activity</h2>
+
+                                <p>Latest activities from your business.</p>
+
+                            </div>
+
+                            <button class="more-btn">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="activity-list">
+
+
+                            <!-- Activity 1 -->
+                            <div class="activity-item">
+
+                                <img src="assets/images/user-1.jpg" alt="Olivia Bennett">
+
+                                <div class="activity-content">
+
+                                    <p>
+                                        <strong>Olivia Bennett</strong>
+                                        completed a new order.
+                                    </p>
+
+                                    <span>5 minutes ago</span>
+
+                                </div>
+
+                                <div class="activity-status success">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Activity 2 -->
+                            <div class="activity-item">
+
+                                <img src="assets/images/user-3.jpg" alt="Sophia Mitchell">
+
+                                <div class="activity-content">
+
+                                    <p>
+                                        <strong>Sophia Mitchell</strong>
+                                        joined as a new customer.
+                                    </p>
+
+                                    <span>25 minutes ago</span>
+
+                                </div>
+
+                                <div class="activity-status info">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Activity 3 -->
+                            <div class="activity-item">
+
+                                <img src="assets/images/user-4.jpg" alt="James Anderson">
+
+                                <div class="activity-content">
+
+                                    <p>
+                                        <strong>James Anderson</strong>
+                                        updated an existing order.
+                                    </p>
+
+                                    <span>1 hour ago</span>
+
+                                </div>
+
+                                <div class="activity-status warning">
+                                    <i class="fa-solid fa-pen"></i>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Activity 4 -->
+                            <div class="activity-item">
+
+                                <img src="assets/images/user-2.jpg" alt="Emma Williams">
+
+                                <div class="activity-content">
+
+                                    <p>
+                                        <strong>Emma Williams</strong>
+                                        made a successful payment.
+                                    </p>
+
+                                    <span>2 hours ago</span>
+
+                                </div>
+
+                                <div class="activity-status success">
+                                    <i class="fa-solid fa-dollar-sign"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="view-activity-btn" id="viewActivityBtn">
+
+                            View All Activity
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- Quick Insights -->
+                    <div class="insights-card">
+
+                        <div class="section-card-header">
+
+                            <div>
+
+                                <h2>Quick Insights</h2>
+
+                                <p>Business performance summary.</p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Insight 1 -->
+                        <div class="insight-item">
+
+                            <div class="insight-header">
+
+                                <div>
+
+                                    <span>Sales Target</span>
+
+                                    <strong>$84,920 / $100,000</strong>
+
+                                </div>
+
+                                <span class="insight-percentage">85%</span>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <span class="sales-progress"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Insight 2 -->
+                        <div class="insight-item">
+
+                            <div class="insight-header">
+
+                                <div>
+
+                                    <span>Customer Growth</span>
+
+                                    <strong>12,580 / 15,000</strong>
+
+                                </div>
+
+                                <span class="insight-percentage">84%</span>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <span class="customer-progress"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Insight 3 -->
+                        <div class="insight-item">
+
+                            <div class="insight-header">
+
+                                <div>
+
+                                    <span>Order Completion</span>
+
+                                    <strong>2,468 / 2,700</strong>
+
+                                </div>
+
+                                <span class="insight-percentage">91%</span>
+
+                            </div>
+
+                            <div class="progress-bar">
+
+                                <span class="order-progress"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Insight Summary -->
+                        <div class="insight-summary">
+
+                            <div class="insight-summary-icon">
+
+                                <i class="fa-solid fa-chart-line"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>Great performance!</strong>
+
+                                <p>
+                                    Your business is performing better than last month.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

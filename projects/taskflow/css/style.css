@@ -1,0 +1,651 @@
+/* =====================================================
+   TASKFLOW TODO APPLICATION
+   Main Stylesheet
+===================================================== */
+
+
+/* =====================================================
+   1. RESET & GLOBAL STYLES
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(79, 70, 229, 0.07), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.06), transparent 30%),
+        #f4f7fb;
+    color: #172033;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+
+/* =====================================================
+   2. MAIN APPLICATION
+===================================================== */
+
+.todo-app {
+    width: 100%;
+    max-width: 760px;
+    background: #ffffff;
+    border: 1px solid #e8edf4;
+    border-radius: 24px;
+    box-shadow:
+        0 25px 70px rgba(23, 32, 51, 0.10),
+        0 4px 12px rgba(23, 32, 51, 0.04);
+    overflow: hidden;
+    animation: appEntrance 0.6s ease both;
+}
+
+
+/* =====================================================
+   3. APP HEADER
+===================================================== */
+
+.app-header {
+    padding: 32px 36px;
+    border-bottom: 1px solid #edf0f5;
+    background: #ffffff;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.brand-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.22);
+    transition: 0.3s ease;
+}
+
+.brand-icon:hover {
+    transform: rotate(-5deg) scale(1.04);
+}
+
+.brand-text h1 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #172033;
+}
+
+.brand-text p {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #7a8497;
+}
+
+
+/* =====================================================
+   4. TODO CONTENT
+===================================================== */
+
+.todo-content {
+    padding: 30px 36px 36px;
+}
+
+
+/* =====================================================
+   5. TASK INPUT
+===================================================== */
+
+.task-form {
+    display: flex;
+    gap: 12px;
+}
+
+.input-wrapper {
+    flex: 1;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 17px;
+    background: #f7f8fc;
+    border: 1px solid #e3e7ef;
+    border-radius: 13px;
+    transition: 0.25s ease;
+}
+
+.input-wrapper i {
+    color: #9aa3b3;
+    font-size: 15px;
+}
+
+.input-wrapper:focus-within {
+    border-color: #4f46e5;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.08);
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #172033;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.input-wrapper input::placeholder {
+    color: #9aa3b3;
+}
+
+.add-task-btn {
+    height: 52px;
+    padding: 0 21px;
+    border: none;
+    border-radius: 13px;
+    background: #4f46e5;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 7px 18px rgba(79, 70, 229, 0.20);
+    transition: 0.25s ease;
+}
+
+.add-task-btn:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(79, 70, 229, 0.28);
+}
+
+.add-task-btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+
+/* =====================================================
+   6. TASK SUMMARY
+===================================================== */
+
+.task-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 28px;
+    margin-bottom: 16px;
+}
+
+.summary-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #7a8497;
+    font-size: 13px;
+}
+
+.summary-text span:first-child {
+    color: #172033;
+    font-weight: 700;
+}
+
+.clear-completed-btn {
+    border: none;
+    background: transparent;
+    color: #8a93a3;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.clear-completed-btn:hover {
+    color: #ef4444;
+}
+
+
+/* =====================================================
+   7. FILTERS
+===================================================== */
+
+.task-filters {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px;
+    width: fit-content;
+    margin-bottom: 20px;
+    background: #f4f6fa;
+    border-radius: 10px;
+}
+
+.filter-btn {
+    border: none;
+    background: transparent;
+    padding: 8px 15px;
+    border-radius: 7px;
+    color: #7a8497;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.filter-btn:hover {
+    color: #4f46e5;
+    transform: translateY(-1px);
+}
+
+.filter-btn:active {
+    transform: translateY(0);
+}
+
+.filter-btn.active {
+    background: #ffffff;
+    color: #4f46e5;
+    box-shadow: 0 2px 8px rgba(23, 32, 51, 0.08);
+}
+
+
+/* =====================================================
+   8. TASK LIST
+===================================================== */
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* =====================================================
+   9. TASK ITEM
+===================================================== */
+
+.task-item {
+    min-height: 64px;
+    padding: 12px 14px 12px 16px;
+    border: 1px solid #e8ecf2;
+    border-radius: 13px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+    animation: taskEntrance 0.3s ease both;
+}
+
+.task-item:hover {
+    border-color: #d8ddea;
+    box-shadow: 0 8px 22px rgba(23, 32, 51, 0.07);
+    transform: translateY(-2px);
+}
+
+.task-left {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+
+/* =====================================================
+   10. COMPLETE BUTTON
+===================================================== */
+
+.complete-btn {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    border: 1.5px solid #cbd2de;
+    border-radius: 7px;
+    background: #ffffff;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 10px;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.complete-btn:hover {
+    border-color: #4f46e5;
+    background: #f1f0ff;
+    color: #4f46e5;
+    transform: scale(1.08);
+}
+
+.complete-btn:active {
+    transform: scale(0.92);
+}
+
+
+/* =====================================================
+   11. TASK TEXT
+===================================================== */
+
+.task-text {
+    color: #30394b;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    word-break: break-word;
+    transition: 0.25s ease;
+}
+
+
+/* =====================================================
+   12. COMPLETED TASK
+===================================================== */
+
+.task-item.completed {
+    background: #fafbfc;
+    border-color: #edf0f4;
+}
+
+.task-item.completed .complete-btn {
+    border-color: #4f46e5;
+    background: #4f46e5;
+    color: #ffffff;
+}
+
+.task-item.completed .task-text {
+    color: #a0a7b4;
+    text-decoration: line-through;
+    text-decoration-thickness: 1.5px;
+}
+
+
+/* =====================================================
+   13. DELETE BUTTON
+===================================================== */
+
+.complete-btn {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    border: 1.5px solid #cbd2de;
+    border-radius: 7px;
+    background: #ffffff;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 10px;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.complete-btn:hover {
+    border-color: #4f46e5;
+    background: #f1f0ff;
+    color: #4f46e5;
+    transform: scale(1.08);
+}
+
+.complete-btn:active {
+    transform: scale(0.92);
+}
+
+
+/* =====================================================
+   14. EMPTY STATE
+===================================================== */
+
+.empty-state {
+    display: none;
+    text-align: center;
+    padding: 50px 20px 35px;
+}
+
+.empty-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 17px;
+    border-radius: 18px;
+    background: #f1f0ff;
+    color: #4f46e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.empty-state h2 {
+    margin-bottom: 7px;
+    color: #30394b;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.empty-state p {
+    color: #8a93a3;
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   15. FOOTER
+===================================================== */
+
+.app-footer {
+    padding: 20px 36px;
+    border-top: 1px solid #edf0f5;
+    text-align: center;
+}
+
+.app-footer p {
+    color: #9aa3b3;
+    font-size: 11px;
+}
+
+.app-footer i {
+    color: #ef4444;
+    margin: 0 3px;
+}
+
+/* =====================================================
+   DISABLED BUTTON
+===================================================== */
+
+.clear-completed-btn:disabled {
+    color: #c5cad3;
+    cursor: not-allowed;
+}
+
+.clear-completed-btn:disabled:hover {
+    color: #c5cad3;
+}
+
+
+/* =====================================================
+   16. RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+        align-items: flex-start;
+    }
+
+    .todo-app {
+        border-radius: 18px;
+    }
+
+    .app-header {
+        padding: 25px 20px;
+    }
+
+    .todo-content {
+        padding: 22px 20px 28px;
+    }
+
+    .task-form {
+        flex-direction: column;
+    }
+
+    .add-task-btn {
+        width: 100%;
+    }
+
+    .task-summary {
+        margin-top: 24px;
+    }
+
+    .task-item {
+        padding: 11px 10px 11px 13px;
+    }
+
+    .task-text {
+        font-size: 13px;
+    }
+
+    .app-footer {
+        padding: 18px 20px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .brand-text h1 {
+        font-size: 21px;
+    }
+
+    .brand-text p {
+        font-size: 12px;
+    }
+
+    .task-summary {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .clear-completed-btn {
+        text-align: right;
+    }
+
+    .task-filters {
+        width: 100%;
+    }
+
+    .filter-btn {
+        flex: 1;
+        padding: 8px 10px;
+    }
+
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes appEntrance {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes taskEntrance {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* =====================================================
+   18. ACCESSIBILITY FOCUS STATES
+===================================================== */
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(79, 70, 229, 0.20);
+    outline-offset: 2px;
+}
+
+/* =====================================================
+   INPUT VALIDATION
+===================================================== */
+
+.input-error {
+    animation: inputShake 0.4s ease;
+}
+
+@keyframes inputShake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+
+}
